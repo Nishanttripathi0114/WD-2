@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //object in js
+        //object is a non-primitive data type in js
+        //object is a collection of key(properties) value pair
+        //object is mutable data type in js
+        //create an object-using literal way and new keyword
+
+        let student={
+            name:"nikhil",
+            age:24,
+            isMarried:false,
+            address:{
+                city:"delhi",
+                state:"delhi",
+                country:"india"
+            },
+            education:["10th","12th","btech"],
+            degree:"B.tech",
+            branch:"cse",
+            year:2025,
+            getInfo:function(){
+                return "my current education is " + student.degree;
+            }
+            };
+        //
+        console.log(student.name);
+        console.log(typeof(student));
+        console.log(student.getInfo());
+        console.log(student.address.city);
+        console.log(student.education[2]);
+        //find keys in object
+        console.log("name" in student);
+        //delete a key from object
+        console.log(delete student.isMarried);
+        console.log(student);
+        //find length of object
+        let keyslength=Object.keys(student);
+        console.log(keyslength.length);
+        //iterate keys in object using for loop
+        for (let i=0;i<keyslength.length;i++){
+            console.log(student[keyslength[i]]);
+        }
+        //iterate keys in object using for in loop
+        for(let x in student){
+            console.log(student[x]);
+        }
+        //create an object using new keyword
+        let myInfo=new Object();
+        myInfo.name="nikhil";
+        myInfo.age=24;
+        myInfo.isMarried=false;
+        myInfo.address={
+            city:"delhi",
+            state:"delhi",
+            country:"india"
+        };
+        myInfo.mobile=35464351354;
+        console.log(myInfo.name);//using dot notation
+        console.log(myInfo["age"]);//using bracket[] notation
+    </script>
+</body>
+</html>
